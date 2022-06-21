@@ -175,3 +175,26 @@ deleteButton.addEventListener('click' , button => {
     calculator.delete()
     calculator.updateDisplay()
 })
+
+function takeOut(el) {
+    el.parentElement.remove();
+  }
+  
+document.getElementById('myButton').onclick = function () {
+    const doIt = document.getElementById('toDo').value;
+    const li = '<li id="item">' + doIt + '<button type="button" onClick="takeOut(this)" id="clearOne">x</button>' + '</li>';
+    document.getElementById('list').insertAdjacentHTML('beforeend', li);
+    document.getElementById('toDo').value = '';
+    document.getElementById('clearList').onclick = function() {
+        const ul = document.getElementById('list');
+        while (ul.hasChildNodes()) {
+            ul.removeChild(ul.firstChild);
+        }
+    }
+    document.getElementById('clearOne').onclick = function () {
+        const currentLi = document.getElementById('item');
+        currentLi.remove();
+    }
+}
+
+

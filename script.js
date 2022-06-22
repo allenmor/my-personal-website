@@ -194,7 +194,29 @@ document.getElementById('myButton').onclick = function () {
     document.getElementById('clearOne').onclick = function () {
         const currentLi = document.getElementById('item');
         currentLi.remove();
-    }
+    };
 }
+function takeOut2(ll) {
+    ll.closest('tr').remove();
+  }
 
-
+document.getElementById('myButton2').onclick = function () {
+    const name = document.getElementById('name').value;
+    const date = document.getElementById('date').value;
+    const amount = document.getElementById('amount').value;
+    const nameTd = '<td>' + name + '</td>';
+    const dateTd = '<td>' + date + '</td>';
+    const amountTd = '<td>' + '$'+ amount + '</td>' + '<td>' + 
+    '<button id="removeBtn"type="button" onClick="takeOut2(this)">X</button></td>';
+    const tr = '<tr>' + nameTd + dateTd +  amountTd + '</tr>';
+    document.getElementById('table').insertAdjacentHTML('beforeend', tr);
+    document.getElementById('clearList2').onclick = function () {
+        const cl = document.getElementById('table');
+        while (cl.hasChildNodes()) {
+            cl.removeChild(cl.firstChild);
+        }
+    }
+    document.getElementById('name').value = '';
+    document.getElementById('amount').value = '';
+    document.getElementById('date').value = '';
+}    

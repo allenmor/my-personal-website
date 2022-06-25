@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <body>
+        <nav>
+            <div class="logo">
+               <h4>Allen Mordukhaev</h4> 
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="about.html">About</a>
+                </li>
+                <li><a href="projects.html">Projects</a>
+                </li>
+                <li><a href="blackjack.html">BlackJack</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+        <h1>BlackJack Card Counter</h1>
+        <br>
+        <br>
+        <label>Deck Amount:<input text="number" id="decks"></label>
+        <button type="button" onclick="deckBtn()">Submit</button>
+        <br>
+        <br>
+        <p>Amount Of Cards In Deck: <span id="amountOfCards">0</span></p>
+        <p>Running Count: <span id="runningCount">0</span></p>
+        <p>True Count: <span id="trueCount">0</span></p>
+        <br>
+        <br>
+        <div>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btn2()">2</button>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btn3()">3</button>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btn4()">4</button>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btn5()">5</button>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btn6()">6</button>
+        <strong style="font-size: 25px;">&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+1</strong>
+            </div>
+        <br>
+        <div>
+        <button style="font-size: 25px; width: 69.5px;" type="button" onclick="btn7()">7</button>
+        <button style="font-size: 25px; width: 69.5px;" type="button" onclick="btn8()">8</button>
+        <button style="font-size: 25px; width: 69.5px;" type="button" onclick="btn9()">9</button>
+        <strong style="font-size: 25px;">&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</strong>
+            </div>
+        <br>
+        <div>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btn10()">10</button>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btnJ()">J</button>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btnQ()">Q</button>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btnK()">K</button>
+        <button style="font-size: 25px; width: 40px;" type="button" onclick="btnA()">A</button>
+        <strong style="font-size: 25px;">&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-1</strong>
+            </div>
+    
+    
+
+        
+        
+        <script src="scriptBlackjack.js"></script>
+    </body>
+</html>
